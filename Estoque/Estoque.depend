@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1567190795 source:c:\users\ismae\documents\ufop\arquivos code block\estoque\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	"Cliente.h"
+
+1567188535 c:\users\ismae\documents\ufop\arquivos code block\estoque\cliente.h
+	<stdio.h>
+	<stdlib.h>
+
+1567190444 source:c:\users\ismae\documents\ufop\arquivos code block\estoque\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Cliente.h"
+	"Produto.h"
+	"Vendas.h"
+	"Modulo.h"
+
+1567188535 c:\users\ismae\documents\ufop\arquivos code block\estoque\produto.h
+	<stdio.h>
+	<stdlib.h>
+	"Cliente.h"
+
+1567189608 c:\users\ismae\documents\ufop\arquivos code block\estoque\vendas.h
+	<stdio.h>
+	<stdlib.h>
+	"Cliente.h"
+
+1567175558 c:\users\ismae\documents\ufop\arquivos code block\estoque\modulo.h
+	<stdio.h>
+	<stdlib.h>
+	"Cliente.h"
+	"Produto.h"
+	"Vendas.h"
+
+1566841164 source:c:\users\ismae\documents\ufop\arquivos code block\estoque\modulo.c
+	"Modulo.h"
+
+1567190203 source:c:\users\ismae\documents\ufop\arquivos code block\estoque\produto.c
+	<stdio.h>
+	<stdlib.h>
+	"Produto.h"
+
+1567190444 source:c:\users\ismae\documents\ufop\arquivos code block\estoque\vendas.c
+	<stdio.h>
+	<stdlib.h>
+	"Vendas.h"
+
