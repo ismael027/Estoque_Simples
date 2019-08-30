@@ -2,56 +2,56 @@
 #include <stdlib.h>
 #include "Vendas.h"
 
-//Função Ler Vendas
-void LerVendas(TVendas *vendas)
+//Função Ler Venda
+void LerVendas(TVendas *Venda)
 {
-    printf("\n======CADASTRO DE VENDAS======");
+    printf("\n======CADASTRO DE VENDA======");
     printf("\nDigite o nome: ");
     fflush(stdin);
-    fgets(vendas->Nome, TAM, stdin);
+    fgets(Venda->Nome, TAM, stdin);
 
     printf("\nDigite o codigo: ");
     fflush(stdin);
-    scanf("%d", &vendas->Codigo);
+    scanf("%d", &Venda->Codigo);
 
     printf("\nDia da venda: ");
     fflush(stdin);
-    scanf("%d", &vendas->DataDeVenda.dia);
+    scanf("%d", &Venda->DataDeVenda.dia);
 
     printf("\nMes da venda: ");
     fflush(stdin);
-    scanf("%d", &vendas->DataDeVenda.mes);
+    scanf("%d", &Venda->DataDeVenda.mes);
 
     printf("\nAno da venda: ");
     fflush(stdin);
-    scanf("%d", &vendas->DataDeVenda.ano);
+    scanf("%d", &Venda->DataDeVenda.ano);
 
     printf("\nDia do pagamento: ");
     fflush(stdin);
-    scanf("%d", &vendas->DataDoPagamento.dia);
+    scanf("%d", &Venda->DataDoPagamento.dia);
 
     printf("\nMes do pagamento: ");
     fflush(stdin);
-    scanf("%d", &vendas->DataDoPagamento.mes);
+    scanf("%d", &Venda->DataDoPagamento.mes);
 
     printf("\nAno do pagamento: ");
     fflush(stdin);
-    scanf("%d", &vendas->DataDoPagamento.ano);
+    scanf("%d", &Venda->DataDoPagamento.ano);
 
     printf("\nTipo do pagamento: a vista digite 0, no credito digite 1");
     fflush(stdin);
-    scanf("%d",&vendas->tipo);
+    scanf("%d",&Venda->tipo);
 }
 
 
-void ImprimirVendas(TVendas IVendas)
+void ImprimirVendas(TVendas IVenda)
 {
     printf("\n\n==========VENDAS==========");
-    printf("\nNome: %s", IVendas.Nome);
-    printf("Codigo: %d", IVendas.Codigo);
-    printf("\nData da compra: %d/%d/%d", IVendas.DataDeVenda.dia, IVendas.DataDeVenda.mes, IVendas.DataDeVenda.ano);
-    printf("\nData do pagamento: %d/%d/%d", IVendas.DataDoPagamento.dia, IVendas.DataDoPagamento.mes, IVendas.DataDoPagamento.ano);
-    if(IVendas.tipo == 0)
+    printf("\nNome: %s", IVenda.Nome);
+    printf("Codigo: %d", IVenda.Codigo);
+    printf("\nData da compra: %d/%d/%d", IVenda.DataDeVenda.dia, IVenda.DataDeVenda.mes, IVenda.DataDeVenda.ano);
+    printf("\nData do pagamento: %d/%d/%d", IVenda.DataDoPagamento.dia, IVenda.DataDoPagamento.mes, IVenda.DataDoPagamento.ano);
+    if(IVenda.tipo == 0)
     {
         printf("\nTipo do pagamento: A vista");
     }

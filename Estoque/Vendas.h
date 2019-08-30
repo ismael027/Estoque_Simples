@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Cliente.h"
+#include "Produto.h"
 
 typedef struct vendas{
     char Nome [TAM];
@@ -13,7 +14,12 @@ typedef struct vendas{
     int tipo;
 }TVendas;
 
-void LerVendas(TVendas *vendas);
+typedef struct moduloVendas{
+TVendas vetor [TAM];
+int indice;
+}TModuloVendas;
+
+void LerVendas(TVendas *Venda);
 void ImprimirVendas(TVendas IVendas);
 
 #endif // VENDAS_H_INCLUDED

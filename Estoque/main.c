@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Cliente.h"
-#include "Produto.h"
 #include "Vendas.h"
-#include "Modulo.h"
+
 
 
 int main()

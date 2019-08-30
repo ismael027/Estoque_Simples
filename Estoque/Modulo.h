@@ -7,19 +7,4 @@
 #include "Produto.h"
 #include "Vendas.h"
 
-typedef struct moduloProduto{
-TProdutos vetor[TAM];
-int indice;
-}TModuloProduto;
-
-typedef struct moduloCliente{
-TClientes vetor [TAM];
-int indice;
-}TModuloCliente;
-
-typedef struct moduloVendas{
-TVendas vetor [TAM];
-int indice;
-}TModuloVendas;
-
 #endif // MODULO_H_INCLUDED

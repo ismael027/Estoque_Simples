@@ -17,6 +17,11 @@ typedef struct prdutos{
 
 }TProdutos;
 
+typedef struct moduloProduto{
+TProdutos vetor[TAM];
+int indice;
+}TModuloProduto;
+
 void LerProduto(TProdutos *produto);
 
 void ImprimirProduto(TProdutos IProduto);

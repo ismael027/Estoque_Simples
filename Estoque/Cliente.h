@@ -31,6 +31,11 @@ typedef struct Clientes{
     int Identidade;
 }TClientes;
 
+typedef struct moduloCliente{
+TClientes vetor [TAM];
+int indice;
+}TModuloCliente;
+
 void LerCliente(TClientes *cliente);
 void ImprimirCliente(TClientes ICliente);
 

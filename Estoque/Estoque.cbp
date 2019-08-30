@@ -35,10 +35,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Cliente.h" />
-		<Unit filename="Modulo.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Modulo.h" />
 		<Unit filename="Produto.c">
 			<Option compilerVar="CC" />
 		</Unit>
