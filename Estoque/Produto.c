@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include "Produto.h"
 
+void IniciarModiloProduto(TModuloProduto *modulo){
+modulo->indice = 0;
+}
+
 //Função para ler os produtos
 void LerProduto(TProdutos *produto)
 {
@@ -54,4 +58,28 @@ void ImprimirProduto(TProdutos IProduto)
     printf("\nLote: %d", IProduto.LoteProduto);
     printf("\nPreco unitario: R$%.2f", IProduto.PrecoUnitario);
     printf("\nEstoque: %d", IProduto.EstoqueProduto);
+}
+
+void InserirProduto(TModuloProduto *modulo, TProdutos produto){
+    if( modulo->indice < TAM ){
+        modulo->vetor[modulo->indice] = produto;
+        modulo->indice++;
+        printf("Produto cadastrado com sucesso!!");
+    }
+    else{
+        printf("Nao é possivel cadastrar, memoria cheia!!");
+    }
+}
+
+int PesquisarProduto(TModuloProduto modulo, TProdutos produto)
+{
+    int i;
+    for(i = 0; i < modulo.indice; i++)
+    {
+        if(produto.CodigoProduto == modulo.vetor.[ i ].CodigoProduto)
+        {
+            return i;
+        }
+    }
+    return -1;
 }

@@ -21,5 +21,6 @@ int indice;
 
 void LerVendas(TVendas *Venda);
 void ImprimirVendas(TVendas IVendas);
+void IniciarModuloVendas(TModuloVendas *modulo);
 
 #endif // VENDAS_H_INCLUDED

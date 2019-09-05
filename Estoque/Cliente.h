@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define TAM 50
+
 //Struct data
 typedef struct data{
     int dia;
@@ -38,5 +39,6 @@ int indice;
 
 void LerCliente(TClientes *cliente);
 void ImprimirCliente(TClientes ICliente);
+void IniciarModuloCliente(TModuloCliente *modulo);
 
 #endif // CLIENTE_H_INCLUDED

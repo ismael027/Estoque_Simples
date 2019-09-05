@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include "Vendas.h"
 
+void IniciarModuloVendas(TModuloVendas *modulo){
+modulo->indice = 0;
+}
+
 //Função Ler Venda
 void LerVendas(TVendas *Venda)
 {

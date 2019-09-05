@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include "Cliente.h"
 
+void IniciarModuloCliente(TModuloCliente *modulo){
+    modulo->indice = 0;
+}
+
 //Função para ler os clientes
 void LerCliente(TClientes *cliente)
 {

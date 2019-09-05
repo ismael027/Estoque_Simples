@@ -6,6 +6,14 @@
 
 int main()
 {
+    TModuloProduto modulo1;
+    IniciarModiloProduto(&modulo1);
+    TModuloCliente modulo2;
+    IniciarModuloCliente(&modulo2);
+    TModuloVendas modulo3;
+    IniciarModuloVendas(&modulo3);
+
+
     TClientes cliente1;
     LerCliente( &cliente1);
     system("cls");

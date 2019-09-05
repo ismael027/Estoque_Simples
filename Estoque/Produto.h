@@ -26,4 +26,10 @@ void LerProduto(TProdutos *produto);
 
 void ImprimirProduto(TProdutos IProduto);
 
+void IniciarModiloProduto(TModuloProduto *modulo);
+
+int PesquisarProduto(TModuloProduto modulo, TProdutos produto);
+
+void InserirProduto(TModuloProduto *modulo, TProdutos produto);
+
 #endif // PRODUTO_H_INCLUDED
