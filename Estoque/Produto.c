@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include "Produto.h"
 
-void IniciarModiloProduto(TModuloProduto *modulo){
-modulo->indice = 0;
+void IniciarModuloProduto(TModuloProduto *modulo)
+{
+    modulo->indice = 0;
 }
 
 //Função para ler os produtos
@@ -14,7 +15,7 @@ void LerProduto(TProdutos *produto)
     fflush(stdin);
     scanf("%d", &produto->CodigoProduto);
 
-    printf("\n Nome: ");
+    printf("\nNome: ");
     fflush(stdin);
     fgets(produto->NomeProduto, TAM, stdin);
 
@@ -60,14 +61,17 @@ void ImprimirProduto(TProdutos IProduto)
     printf("\nEstoque: %d", IProduto.EstoqueProduto);
 }
 
-void InserirProduto(TModuloProduto *modulo, TProdutos produto){
-    if( modulo->indice < TAM ){
+void InserirProduto(TModuloProduto *modulo, TProdutos produto)
+{
+    if( modulo->indice < TAM )
+    {
         modulo->vetor[modulo->indice] = produto;
         modulo->indice++;
-        printf("Produto cadastrado com sucesso!!");
+        printf("\nProduto cadastrado com sucesso!!");
     }
-    else{
-        printf("Nao é possivel cadastrar, memoria cheia!!");
+    else
+    {
+        printf("\nNao e possivel cadastrar, memoria cheia!!");
     }
 }
 
@@ -76,10 +80,60 @@ int PesquisarProduto(TModuloProduto modulo, TProdutos produto)
     int i;
     for(i = 0; i < modulo.indice; i++)
     {
-        if(produto.CodigoProduto == modulo.vetor.[ i ].CodigoProduto)
+        if(produto.CodigoProduto == modulo.vetor[i].CodigoProduto)
         {
             return i;
         }
     }
     return -1;
+}
+
+void ImprimirGeral(TModuloProduto modulo, TProdutos IGProduto)
+{
+    int i;
+    for( i = 0; i < modulo.indice; i++)
+    {
+        ImprimirProduto(modulo.vetor[i]);
+    }
+
+}
+
+void AlterarProduto(TModuloProduto *modulo, TProdutos produto)
+{
+    int i;
+    i = PesquisarProduto(*modulo, produto);
+    if( i != -1)
+    {
+        printf("\nProduto encontrado!!");
+        LerProduto(&produto);
+        modulo->vetor[i] = produto;
+        ImprimirProduto(modulo->vetor[i]);
+        printf("\nProduto alterado com sucesso!!");
+    }
+    else
+    {
+        printf("\nProduto nao encontrado!!");
+    }
+
+}
+
+void ExcluirProduto(TModuloProduto *modulo, TProdutos produto)
+{
+    int i, n;
+    i = PesquisarProduto(*modulo, produto);
+    if( i != -1)
+    {
+        printf("\nProduto encontrado!!");
+        for( n = i ; n < modulo->indice - 1; n++)
+        {
+            modulo->vetor[n] = modulo->vetor[n+1];
+        }
+        modulo->indice = modulo->indice -1;
+        printf("\nProduto excluido com sucesso!!");
+    }
+    else
+    {
+        printf("\nProduto nao encontrado!!");
+    }
+
 }

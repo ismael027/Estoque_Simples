@@ -6,7 +6,8 @@
 #include "Cliente.h"
 
 
-typedef struct prdutos{
+typedef struct prdutos
+{
     int CodigoProduto;
     char NomeProduto[TAM];
     char DescricaoProduto[TAM];
@@ -15,21 +16,22 @@ typedef struct prdutos{
     float PrecoUnitario;
     int EstoqueProduto;
 
-}TProdutos;
+} TProdutos;
 
-typedef struct moduloProduto{
-TProdutos vetor[TAM];
-int indice;
-}TModuloProduto;
+typedef struct moduloProduto
+{
+    TProdutos vetor[TAM];
+    int indice;
+} TModuloProduto;
 
 void LerProduto(TProdutos *produto);
-
 void ImprimirProduto(TProdutos IProduto);
-
-void IniciarModiloProduto(TModuloProduto *modulo);
-
-int PesquisarProduto(TModuloProduto modulo, TProdutos produto);
-
+void IniciarModuloProduto(TModuloProduto *modulo);
 void InserirProduto(TModuloProduto *modulo, TProdutos produto);
+int PesquisarProduto(TModuloProduto modulo, TProdutos produto);
+void ImprimirGeral(TModuloProduto modulo, TProdutos IGProduto);
+void AlterarProduto(TModuloProduto *modulo, TProdutos produto);
+void ExcluirProduto(TModuloProduto *modulo, TProdutos produto);
+
 
 #endif // PRODUTO_H_INCLUDED

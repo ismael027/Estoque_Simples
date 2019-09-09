@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include "Vendas.h"
 
-void IniciarModuloVendas(TModuloVendas *modulo){
-modulo->indice = 0;
+void IniciarModuloVendas(TModuloVendas *modulo)
+{
+    modulo->indice = 0;
 }
 
 //Função Ler Venda
@@ -62,5 +63,79 @@ void ImprimirVendas(TVendas IVenda)
     else
     {
         printf("\nTipo do pagamento: Credito");
+    }
+}
+
+void InserirVendas(TModuloVendas *modulo, TVendas venda)
+{
+    if(modulo->indice < TAM)
+    {
+        modulo->vetor[modulo->indice] = venda;
+        modulo->indice++;
+        printf("\nVenda cadastrado com sucesso!!");
+    }
+    else
+    {
+        printf("\nNao e possivel cadastrar, memoria cheia!!");
+    }
+}
+
+int PesquisarVendas(TModuloVendas modulo, TVendas venda)
+{
+    int i;
+    for( i = 0; i < modulo.indice; i++)
+    {
+        if(venda.Codigo == modulo.vetor[i].Codigo)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+void ImprimirGeralV(TModuloVendas modulo, TVendas venda)
+{
+     int i;
+    for( i = 0; i < modulo.indice; i++)
+    {
+        ImprimirVendas(modulo.vetor[i]);
+    }
+}
+
+void AlterarVendas(TModuloVendas *modulo, TVendas venda)
+{
+    int i;
+    i = PesquisarVendas(*modulo, venda);
+    if( i != -1)
+    {
+        printf("\nVenda encontrada!!");
+        LerVendas(&venda);
+        modulo->vetor[i] = venda;
+        ImprimirVendas(modulo->vetor[i]);
+        printf("\nVenda alterada com sucesso!!");
+    }
+    else
+    {
+        printf("\nVenda nao encontrada!!");
+    }
+}
+
+void ExcluirVendas(TModuloVendas *modulo, TVendas vendas)
+{
+    int i, n;
+    i = PesquisarVendas(*modulo, vendas);
+    if( i != -1)
+    {
+        printf("\nVenda encontrada!!");
+        for( n = i ; n < modulo->indice - 1; n++)
+        {
+            modulo->vetor[n] = modulo->vetor[n+1];
+        }
+        modulo->indice = modulo->indice -1;
+        printf("\nVenda excluida com sucesso!!");
+    }
+    else
+    {
+        printf("\nVenda nao encontrada!!");
     }
 }
