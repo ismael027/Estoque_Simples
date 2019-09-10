@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "Cliente.h"
 #include "Produto.h"
+#include "Menus.h"
 
 typedef struct vendas
 {

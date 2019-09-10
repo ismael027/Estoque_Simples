@@ -19,7 +19,6 @@ int main()
     IniciarModuloVendas(&modulo3);
 
     //Teste 1: Leitura
-
     for(int a = 0; a < 4; a++){
     LerProduto(&produto1);
     InserirProduto(&modulo1, produto1);
