@@ -86,7 +86,7 @@ int PesquisarVendas(TModuloVendas modulo, TVendas venda, TModuloCliente moduloC,
     for( i = 0; i < modulo.indice; i++)
     {
         if(venda.Codigo == modulo.vetor[i].Codigo)
-        {   printf("\nCodigo correto!!");
+        {   printf("\nCodigo da venda correto!!");
             for( j = 0; j < moduloC.indice; j++)
             {
                 if(cliente.ID == moduloC.vetor[i].ID)
@@ -96,13 +96,14 @@ int PesquisarVendas(TModuloVendas modulo, TVendas venda, TModuloCliente moduloC,
                     {
                         if(produto.CodigoProduto == moduloP.vetor[i].CodigoProduto)
                         {
-                            printf("\nVenda encontrada!");
+                            printf("\nCodigo do produto encontrado!!");
+                            printf("\nVenda encontrada!!");
                             return i;
-                        }
+                        }else{printf("\nCodigo do produto incorreto");}
                     }
                 }else{printf("\nID incorreto!!");}
             }
-        }else{printf("\nCodigo incorreto!!");}
+        }else{printf("\nCodigo da venda incorreto!!");}
     }
     printf("\nNao foi possivel encontrar a venda!");
     return -1;

@@ -82,7 +82,7 @@
 1566841164 source:c:\users\ismae\onedrive\codigos\codigos\estoque\modulo.c
 	"Modulo.h"
 
-1568750126 source:c:\users\ismae\onedrive\codigos\codigos\estoque\produto.c
+1568767244 source:c:\users\ismae\onedrive\codigos\codigos\estoque\produto.c
 	<stdio.h>
 	<stdlib.h>
 	"Produto.h"
@@ -102,7 +102,7 @@
 	<stdlib.h>
 	"Vendas.h"
 
-1568754395 source:c:\users\ismae\onedrive\codigos\codigos\estoque\menu.c
+1568768068 source:c:\users\ismae\onedrive\codigos\codigos\estoque\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"Menu.h"

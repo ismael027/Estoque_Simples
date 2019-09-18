@@ -46,10 +46,12 @@ void SubMenuProduto(TModuloProduto* ModuloP, TProdutos produto)
         scanf("%d", &opcao);
         switch(opcao)
         {
+            //INSERIR
         case 1:
             LerProduto(&produto);
             InserirProduto(ModuloP, produto);
             break;
+            //PESQUISAR
         case 2:
             printf("\nDigite o codigo do produto:");
             fflush(stdin);
