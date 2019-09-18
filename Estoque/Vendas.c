@@ -99,12 +99,16 @@ int PesquisarVendas(TModuloVendas modulo, TVendas venda, TModuloCliente moduloC,
                             printf("\nCodigo do produto encontrado!!");
                             printf("\nVenda encontrada!!");
                             return i;
-                        }else{printf("\nCodigo do produto incorreto");}
+                        }else{printf("\nCodigo do produto incorreto");
+                        break;}
                     }
-                }else{printf("\nID incorreto!!");}
+                }else{printf("\nID incorreto!!");
+                break;}
             }
-        }else{printf("\nCodigo da venda incorreto!!");}
+        }else{printf("\nCodigo da venda incorreto!!");
+        break;}
     }
+
     printf("\nNao foi possivel encontrar a venda!");
     return -1;
 }

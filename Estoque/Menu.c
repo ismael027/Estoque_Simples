@@ -75,7 +75,9 @@ void SubMenuProduto(TModuloProduto* ModuloP, TProdutos produto)
             fflush(stdin);
             scanf("%d", &produto.CodigoProduto);
             i = PesquisarProduto(*ModuloP, produto);
+            if( i != -1){
             ImprimirProduto(ModuloP->vetor[i]);
+            }
             break;
         case 6:
             ImprimirGeral(*ModuloP, produto);
@@ -154,7 +156,9 @@ void SubMenuVenda(TModuloProduto* ModuloP, TProdutos produto, TModuloCliente* Mo
             fflush(stdin);
             scanf("%d", &Clientes.ID);
             i = PesquisarVendas(*ModuloV, vendas, *ModuloC, Clientes, *ModuloP, produto);
+            if( i != -1){
             ImprimirVendas(ModuloV->vetor[i]);
+            }
             break;
         case 6:
             ImprimirGeralV(*ModuloV, vendas);
@@ -209,7 +213,9 @@ void SubMenuCliente(TModuloCliente* ModuloC, TClientes cliente)
             fflush(stdin);
             scanf("%d", &cliente.ID);
             i = PesquisarCliente(*ModuloC, cliente);
+            if( i != -1){
             ImprimirCliente(ModuloC->vetor[i]);
+            }
             break;
         case 6:
             ImprimirGeralC(*ModuloC, cliente);
