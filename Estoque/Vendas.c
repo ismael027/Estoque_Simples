@@ -89,12 +89,12 @@ void InserirVendas(TModuloVendas *modulo, TVendas venda, TModuloProduto *moduloP
         {
             if( j != -1)
             {
-                if(moduloP->vetor[i].EstoqueProduto > venda.Quantidade)
+                if(moduloP->vetor[i].EstoqueProduto >= venda.Quantidade)
                 {
-                    venda.Peco = venda.Quantidade * produto.PrecoUnitario;
                     modulo->vetor[modulo->indice] = venda;
+                    modulo->vetor[modulo->indice].Peco = modulo->vetor[modulo->indice].Quantidade * moduloP->vetor[i].PrecoUnitario;
+                    moduloP->vetor[i].EstoqueProduto = moduloP->vetor[i].EstoqueProduto - modulo->vetor[modulo->indice].Quantidade;
                     modulo->indice++;
-                    produto.EstoqueProduto = produto.EstoqueProduto - venda.Quantidade;
                     printf("\nVenda cadastrado com sucesso!!");
                 }
                 else
