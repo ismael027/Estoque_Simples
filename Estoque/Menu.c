@@ -126,59 +126,48 @@ void SubMenuVenda(TModuloProduto* ModuloP, TProdutos produto, TModuloCliente* Mo
             system("PAUSE");
             break;
         case 2:
-            printf("\nDigite o codigo da venda:");
-            fflush(stdin);
-            scanf("%d", &vendas.Codigo);
             printf("\nDigite o codigo do produto:");
             fflush(stdin);
             scanf("%d", &produto.CodigoProduto);
             printf("\nDigite o CPF/CNPJ do cliente:");
             fflush(stdin);
             fgets(Clientes.ID, TAM, stdin);
-            PesquisarVendas(*ModuloV, vendas, *ModuloC, Clientes, *ModuloP, produto);
+            PesquisarVendas(*ModuloV, vendas, Clientes, produto);
             printf("\n");
             system("PAUSE");
             break;
         case 3:
-            printf("\nDigite o codigo da venda:");
-            fflush(stdin);
-            scanf("%d", &vendas.Codigo);
             printf("\nDigite o codigo do produto:");
             fflush(stdin);
             scanf("%d", &produto.CodigoProduto);
             printf("\nDigite o CPF/CNPJ do cliente:");
             fflush(stdin);
             fgets(Clientes.ID, TAM, stdin);
-            AlterarVendas(ModuloV, vendas, *ModuloC, Clientes, *ModuloP, produto);
+            AlterarVendas(ModuloV, vendas, *ModuloC, Clientes, ModuloP, produto);
             printf("\n");
             system("PAUSE");
             break;
         case 4:
-            printf("\nDigite o codigo da venda:");
-            fflush(stdin);
-            scanf("%d", &vendas.Codigo);
             printf("\nDigite o codigo do produto:");
             fflush(stdin);
             scanf("%d", &produto.CodigoProduto);
             printf("\nDigite o CPF/CNPJ do cliente:");
             fflush(stdin);
             fgets(Clientes.ID, TAM, stdin);
+
             ExcluirVendas(ModuloV, vendas, *ModuloC, Clientes, *ModuloP, produto);
             printf("\n");
             system("PAUSE");
             break;
         case 5:
-            printf("\nDigite o codigo da venda:");
-            fflush(stdin);
-            scanf("%d", &vendas.Codigo);
             printf("\nDigite o codigo do produto:");
             fflush(stdin);
             scanf("%d", &produto.CodigoProduto);
             printf("\nDigite o CPF/CNPJ do cliente:");
             fflush(stdin);
             fgets(Clientes.ID, TAM, stdin);
-            i = PesquisarVendas(*ModuloV, vendas, *ModuloC, Clientes, *ModuloP, produto);
-            if( i != -1){
+            i = PesquisarVendas(*ModuloV, vendas, Clientes, produto);
+            if( i != -1 ){
             ImprimirVendas(ModuloV->vetor[i]);
             }printf("\n");
             system("PAUSE");
