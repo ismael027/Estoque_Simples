@@ -162,20 +162,25 @@ void ImprimirGeralV(TModuloVendas modulo, TVendas venda)
 
 void AlterarVendas(TModuloVendas *modulo, TVendas venda, TModuloCliente moduloC, TClientes cliente, TModuloProduto *moduloP, TProdutos produto)
 {
-    int i, j;
+    int i, j, aux;
     i = PesquisarVendas(*modulo, venda, cliente, produto);
     j= PesquisarProduto(*moduloP, produto);
     if( i != -1)
     {
         LerVendas(&venda);
-        moduloP->vetor[j].EstoqueProduto = moduloP->vetor[j].EstoqueProduto + modulo->vetor[i].Quantidade;
+        aux = moduloP->vetor[j].EstoqueProduto + modulo->vetor[i].Quantidade; //voltar estoque
 
+        if(moduloP->vetor[i].EstoqueProduto + aux >= venda.Quantidade){
         modulo->vetor[i] = venda;
 
         modulo->vetor[i].Peco = modulo->vetor[i].Quantidade * moduloP->vetor[i].PrecoUnitario;
-        moduloP->vetor[j].EstoqueProduto = moduloP->vetor[j].EstoqueProduto - modulo->vetor[i].Quantidade;
+        moduloP->vetor[j].EstoqueProduto = aux- modulo->vetor[i].Quantidade;
         ImprimirVendas(modulo->vetor[i]);
         printf("\nVenda alterada com sucesso!!");
+    }else
+    {
+        printf("\nEstoque insuficiente!!");
+    }
     }
 }
 
