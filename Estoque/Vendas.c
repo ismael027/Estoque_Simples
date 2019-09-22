@@ -12,7 +12,7 @@ void IniciarModuloVendas(TModuloVendas *modulo)
 void LerVendas(TVendas *Venda)
 {
     printf("\n======CADASTRO DE VENDA======");
-    printf("\nDigite o ID do cliente: ");
+    printf("\nDigite o CPF/CNPJ do cliente: ");
     fflush(stdin);
     fgets(Venda->Nome, TAM, stdin);
 
@@ -48,7 +48,7 @@ void LerVendas(TVendas *Venda)
     fflush(stdin);
     scanf("%d", &Venda->DataDoPagamento.ano);
 
-    printf("\nTipo do pagamento: a vista digite 0, no credito digite 1");
+    printf("\nTipo do pagamento: a vista digite 0, no credito digite 1: ");
     fflush(stdin);
     scanf("%d",&Venda->tipo);
 }

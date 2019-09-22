@@ -23,15 +23,15 @@ void LerProduto(TProdutos *produto)
     fflush(stdin);
     fgets(produto->DescricaoProduto, TAM, stdin);
 
-    printf("\nDia de farbicacao: ");
+    printf("\nDia de fabricacao: ");
     fflush(stdin);
     scanf("%d", &produto->DataFabricacao.dia);
 
-    printf("\nMes de farbicacao: ");
+    printf("\nMes de fabricacao: ");
 
     scanf("%d", &produto->DataFabricacao.mes);
 
-    printf("\nAno de farbicacao: ");
+    printf("\nAno de fabricacao: ");
     fflush(stdin);
     scanf("%d", &produto->DataFabricacao.ano);
 

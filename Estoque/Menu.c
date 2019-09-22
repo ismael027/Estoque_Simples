@@ -24,7 +24,7 @@ void MenuPrincipal(TModuloProduto *ModuloP, TProdutos produto, TModuloCliente *M
             SubMenuVenda(ModuloP, produto,ModuloC, Clientes, ModuloV, vendas);
             break;
         case 4:
-            printf("\nSaindo do sistema!");
+            printf("\nSaindo do sistema!\n");
             system("PAUSE");
         default:
             printf("digite uma opcao valida!");
