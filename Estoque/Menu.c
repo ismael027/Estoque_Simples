@@ -299,7 +299,6 @@ void SubMenuProva(TModuloProduto* ModuloP, TProdutos produto, TModuloCliente* Mo
             i = PesquisarCliente(*ModuloC, cliente2);
             if( i != -1)
                 {
-                    printf("passou");
                     ComparaCliente(*ModuloV, Clientes, cliente2);
                 }
             }
@@ -324,6 +323,8 @@ void SubMenuProva(TModuloProduto* ModuloP, TProdutos produto, TModuloCliente* Mo
                 scanf("%d", &data.ano);
                 NotaFiscal(*ModuloV, Clientes, data, ModuloNota);
             }
+            printf("\n");
+            system("PAUSE");
             break;
         case 5:
              printf("Retornando ao menu principal");

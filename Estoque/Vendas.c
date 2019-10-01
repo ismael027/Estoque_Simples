@@ -261,7 +261,9 @@ void NotaFiscal(TModuloVendas modulo, TClientes cliente, TData data, TModuloNota
         {
             ModuloNota->vetor[ModuloNota->indice] = modulo.vetor[i];
             ModuloNota->indice++;
+            printf("\n==========NOTA FISCAL==========");
             ImprimirVendas(modulo.vetor[i]);
+            printf("\nOBRIGADO PELA PREFERENCIA, VOLTE SEMPRE!");
         }
     }
 
