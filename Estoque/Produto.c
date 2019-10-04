@@ -138,7 +138,7 @@ void MaisVendido(TModuloProduto modulo )
     aux = 0;
     for( i = 0; i <= modulo.indice; i++ )
     {
-        if(modulo.vetor[i].Quantidade_Total_Vendida > aux)
+        if(modulo.vetor[i].Quantidade_Total_Vendida >= aux)
         {
             aux = modulo.vetor[i].Quantidade_Total_Vendida;
             j = i;

@@ -236,7 +236,7 @@ void ComparaCliente(TModuloVendas modulo, TClientes cliente1, TClientes cliente2
         aux = strcmp(modulo.vetor[i].Nome, cliente1.ID);
         if ( aux == 0)
         {
-            for( j = 0; j < modulo.indice; j++ )
+            for( j = i + 1; j < modulo.indice; j++ )
             {
                 aux2 = strcmp(modulo.vetor[j].Nome, cliente2.ID);
                 if( aux2 == 0)
@@ -252,8 +252,11 @@ void ComparaCliente(TModuloVendas modulo, TClientes cliente1, TClientes cliente2
 }
 
 void NotaFiscal(TModuloVendas modulo, TClientes cliente, TData data, TModuloNotaFiscal *ModuloNota)
+
+
+
 {
-    int i, aux;
+    int i, aux, test = 0;
     for( i = 0; i < modulo.indice; i++)
     {
         aux = strcmp( modulo.vetor[i].Nome, cliente.ID);
@@ -261,10 +264,13 @@ void NotaFiscal(TModuloVendas modulo, TClientes cliente, TData data, TModuloNota
         {
             ModuloNota->vetor[ModuloNota->indice] = modulo.vetor[i];
             ModuloNota->indice++;
-            printf("\n==========NOTA FISCAL==========");
             ImprimirVendas(modulo.vetor[i]);
-            printf("\nOBRIGADO PELA PREFERENCIA, VOLTE SEMPRE!");
+            test++;
         }
     }
 
+    if( test == 0 )
+    {
+        printf("\nNao ha compras desse cliente nesse dia!");
+    }
 }
